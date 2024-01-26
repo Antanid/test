@@ -1,5 +1,6 @@
 import Image from "next/image";
 import {FC} from "react";
+import cn from "classnames";
 
 interface ReviewsBlocksType {
     users: {
@@ -9,10 +10,11 @@ interface ReviewsBlocksType {
 
 const ReviewsBlocks: FC<ReviewsBlocksType> = ({users}) => {
     return (
-        <div className='pb-16'>
+        <div className='pb-16 sm:flex sm:justify-around sm:gap-x-4 lg:justify-center lg:gap-x-16'>
             {
                 users.map((user) => (
-                    <div key={user.title} className="border-2 border-dashed border-black rounded-3xl p-6 mt-10">
+                    <div key={user.title} className={cn("border-2 border-dashed border-black rounded-3xl p-6 mt-10 sm:w-340 sm:h-220", {
+                    "hidden lg:block" : user.name === "Karen Napoly"})}>
                         <div>
                         <Image
                             src={'/curly-quotes.png'}
@@ -27,7 +29,7 @@ const ReviewsBlocks: FC<ReviewsBlocksType> = ({users}) => {
                             {user.title}
                         </p>
 
-                        <div className='flex items-center gap-x-3 h-[40px]'>
+                        <div className='flex items-center gap-x-3 h-[40px] sm:pt-4'>
                             <Image
                                 src={user.userImg}
                                 alt={'review'}

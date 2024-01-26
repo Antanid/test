@@ -2,8 +2,8 @@ import {FC} from "react";
 import {Icon} from "@/app/icons/interface";
 
 const SignUpLine: FC<Icon> = ({
-                                 width = "61",
-                                 height = "10",
+                                 width = "100%",
+                                 height = "100%",
                                  currentColor = "#fff",
                                  ...props
                              }) => {

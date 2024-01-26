@@ -2,8 +2,8 @@ import {FC} from "react";
 import {Icon} from "@/app/icons/interface";
 
 const OvalCoreFeatures: FC<Icon> = ({
-                            width = "148",
-                            height = "65",
+                            width = "100%",
+                            height = "100%",
                             currentColor = "#000",
                             ...props
                         }) => {

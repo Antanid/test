@@ -5,17 +5,15 @@ import {FC} from "react";
 interface FeaturesType {
     data: dataType[]
 }
-const itemStyle = "border-2 border-dashed border-black rounded-3xl p-10 text-center mt-10"
+const itemStyle = "border-2 border-dashed border-black rounded-3xl p-10 text-center mt-10 w-full sm:w-280 sm:h-280"
 
 const Features: FC<FeaturesType> = ({data}) => {
     return (
-        <div className='mb-16'>
+        <div className='mb-16 flex justify-center items-center flex-wrap gap-x-10'>
             {
                 data.map((item, index) => (
                     <div key={item.title}
-                         className={cn(itemStyle, {
-                           '!mt-0' : index === 0
-                         })}>
+                         className={cn(itemStyle)}>
                         <div className='flex justify-center pb-4'>
                             {item.img}
                         </div>

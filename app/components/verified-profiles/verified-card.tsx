@@ -9,7 +9,7 @@ const VerifiedCard = () => {
                 width={274}
                 height={484}
                 loading="eager"
-                className='object-cover'
+                className='object-cover sm:w-auto sm:h-[484px]'
                 priority
             />
         </div>

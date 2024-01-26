@@ -3,27 +3,20 @@ import Image from "next/image";
 import Infinity from "@/app/icons/infinity";
 import PhotoCard from "@/app/components/see-more/photo-card";
 import ButtonMore from "@/app/components/see-more/button-more";
+import DesktopText from "@/app/components/see-more/desktop-text";
+import TabletMobileText from "@/app/components/see-more/tablet-mobile-text";
 
 const SeeMore = () => {
     return(
         <div
-            className="flex flex-col justify-center items-center px-5 bg-black bg-[url('/backgrounds/see-more.png')] bg-cover bg-center py-40">
+            className="flex flex-col justify-center items-center px-5 bg-black
+            bg-[url('/backgrounds/see-more.png')]
+             sm:bg-[url('/backgrounds/desktop.png')]
+             bg-cover bg-center py-40 lg:py-24">
 
-            <div className='flex items-center gap-x-4 flex-wrap'>
-                <p className='text-white text-2xl font-bold'>Tired Of</p>
-                <div className='relative'>
-                    <p className='text-white text-2xl font-merienda'>Swiping Endlessly</p>
-                    <div className='absolute'>
-                        <Line width={'100%'}/>
-                    </div>
+<TabletMobileText/>
 
-                </div>
-
-            </div>
-            <p className='text-white font-bold text-2xl mt-6'>
-                On Dating Apps?
-            </p>
-
+           <DesktopText/>
             <PhotoCard/>
            <ButtonMore/>
         </div>

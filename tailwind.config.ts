@@ -24,6 +24,18 @@ const config: Config = {
         "primary": "#0F0F0F",
         "light-gray": "#4A4A4A"
       },
+      fontSize: {
+        "32": '32px',
+        "40": "40px"
+      },
+      width: {
+        "280": "280px",
+        "340": "340px",
+      },
+      height: {
+        "280": "280px",
+        "220": "220px"
+      }
     },
   },
   plugins: [],

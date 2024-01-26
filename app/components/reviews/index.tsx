@@ -10,11 +10,17 @@ const users = [
         location: "Los Angeles, USA"
     },
     {
+        title: "I was amazed to see users close to my location, given I further out from a main city.",
+        userImg: "/review-3.png",
+        name: "Karen Napoly",
+        location: "Marengo, Iowa"
+    },
+    {
         title: "Finally found men who are straight with their intentions. I can’t wait to tell my girlfriends about this site :)",
         userImg: "/review-2.png",
         name: "Angela Taylor",
         location: "Houston, Texas"
-    },
+    }
 ]
 
 const Reviews = () => {

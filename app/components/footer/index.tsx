@@ -9,6 +9,8 @@ import TikTok from "@/app/icons/tik-tok";
 import FooterLists from "@/app/components/footer/footer-lists";
 import EmailInput from "@/app/components/footer/email-input";
 import Socials from "@/app/components/footer/socials";
+import FooterDesktop from "@/app/components/footer/footer-desktop";
+import LogoText from "@/app/components/footer/logo-text";
 
 const [footerLists, socials] = [
     [
@@ -47,37 +49,43 @@ const [footerLists, socials] = [
    ]
 ]
 const Footer = () => {
-    const [inputValue, setInputValue] = useState('')
+    const [inputValue, setInputValue] = useState<string>('')
     function onInputChange (event: ChangeEvent<HTMLInputElement>) {
         setInputValue(event.target.value)
     }
 
     return(
-<div className='px-4'>
+        <div className='px-4'>
 
-<div className='flex justify-center items-center py-6'>
-    <p className='text-2xl font-normal font-merienda'>HisLovers</p>
-</div>
+         <LogoText/>
 
-<FooterLists footerLists={footerLists}/>
+            <div className='sm:flex sm:justify-between sm:items-center sm:pb-10 lg:hidden'>
+                <FooterLists footerLists={footerLists}/>
 
-    <EmailInput inputValue={inputValue} onInputChange={onInputChange}/>
+                <EmailInput inputValue={inputValue} onInputChange={onInputChange}/>
+            </div>
 
-    <div className='flex justify-center items-center'>
-        <p className='text-black text-sm font-medium'>
-            Join now to be a part of
-            <br/>
-            our exclusive community!
-        </p>
-    </div>
+            <div className='flex justify-center items-center lg:hidden'>
+                <p className='text-black text-sm font-medium'>
+                    Join now to be a part of
+                    <br className='sm:hidden'/>
+                    our exclusive community!
+                </p>
+            </div>
 
-   <Socials socials={socials}/>
+            <div className='lg:hidden'>
+                <Socials socials={socials}/>
+            </div>
 
-<div className='flex justify-center items-center pb-6'>
-    <p className='text-xs'>Copyright © 2023 Hislovers. All rights reserved.</p>
-</div>
 
-</div>
+ <FooterDesktop footerLists={footerLists} socials={socials} inputValue={inputValue} onInputChange={onInputChange}/>
+
+
+            <div className='flex justify-center items-center pb-6'>
+                <p className='text-xs'>Copyright © 2023 Hislovers. All rights reserved.</p>
+            </div>
+
+        </div>
     );
 }
 export default Footer;

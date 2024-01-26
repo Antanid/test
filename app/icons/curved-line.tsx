@@ -2,8 +2,8 @@ import {FC} from "react";
 import {Icon} from "@/app/icons/interface";
 
 const CurvedLine: FC<Icon> = ({
-                                 width = "88",
-                                 height = "6",
+                                 width = "100%",
+                                 height = "100%",
                                  currentColor = "#fff",
                                  ...props
                              }) => {

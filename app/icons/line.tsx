@@ -2,8 +2,8 @@ import {FC} from "react";
 import {Icon} from "@/app/icons/interface";
 
 const Line: FC<Icon> = ({
-                                  width = "194",
-                                  height = "12",
+                                  width = "100%",
+                                  height = "100%",
                                   currentColor = "currentColor",
                                   ...props
                               }) => {

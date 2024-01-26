@@ -7,7 +7,7 @@ interface FooterListsType {
 }
 const FooterLists: FC<FooterListsType> = ({footerLists}) => {
     return (
-        <div className='flex flex-wrap flex-col h-[100px] gap-y-4'>
+        <div className='flex flex-wrap flex-col h-[100px] gap-y-4 sm:w-1/2 lg:w-[300px]'>
             {
                 footerLists.map((list) => (
                     <p key={list.title}
