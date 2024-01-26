@@ -18,9 +18,8 @@ const FooterDesktop: FC<FooterDesktopType> = ({footerLists, socials, inputValue,
         <div className='hidden lg:pt-10 lg:px-20 lg:flex lg:justify-center 2xl:gap-x-16'>
             <div className=''>
                 <p className='text-2xl font-normal font-merienda pb-2'>HisLovers</p>
-                <p className='text-black text-sm font-medium'>
+                <p className='text-black text-sm font-medium w-56'>
                     Join now to be a part of our
-                    <br className=''/>
                     exclusive community!
                 </p>
                 <Socials socials={socials}/>

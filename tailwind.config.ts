@@ -9,8 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'merienda': ['MeriendaOne'],
-        'monsterrat': 'Monsterrat'
+        'merienda': ['MeriendaOne']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

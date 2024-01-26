@@ -23,20 +23,8 @@
   font-style: normal;
 }
 
-{/*
-@font-face {
-  font-family: "Monsterrat";
-  src:    url("../public/fonts/montserrat/Montserrat-Regular.ttf") format("truetype"),
-          url("../public/fonts/montserrat/Montserrat-Light.ttf") format("truetype"),
-          url("../public/fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-*/}
-
 *{
-  @apply font-monsterrat
+  font-family: 'Montserrat', sans-serif;
 }
 
 /*burger-menu animation*/

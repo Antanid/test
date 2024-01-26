@@ -1,6 +1,8 @@
 import {FC} from "react";
 import cn from "classnames";
 import Button from "@/app/components/button";
+import MenuLists from "@/app/components/burger-menu/menu-lists";
+import Socials from "@/app/components/burger-menu/socials";
 
 interface BurgerMenuType {
     isMenuOpen: boolean | null
@@ -55,35 +57,8 @@ h-full
   bg-cover bg-center
             ">
                 <div className='sm:flex sm:justify-around h-fit'>
-                    <div className='px-4 pt-28 pb-8'>
-                        {menuLists.map((list) => (
-                            <p key={list.title}
-                               className='text-white text-2xl font-bold cursor-pointer pb-4 sm:text-32 sm:pb-12'
-                            >
-                                {list.title}
-                            </p>
-                        ))}
-                    </div>
-                    <div className='px-4 flex flex-wrap sm:mt-28 sm:flex-col'>
-                        <div className='mr-24'>
-                            <p className='text-white text-xs font-bold pb-1 sm:text-lg sm:pb-2'>Our Social</p>
-                            <div className='flex flex-col'>
-                                {
-                                    socials.map((social) => (
-                                        <p key={social.title}
-                                           className='text-white pb-2 cursor-pointer text-base font-thin sm:text-2xl sm:pb-5'
-                                        >
-                                            {social.title}
-                                        </p>
-                                    ))
-                                }
-                            </div>
-                        </div>
-                        <div className='text-white'>
-                            <p className='text-xs font-bold sm:text-lg sm:pb-2'>Get In Touch</p>
-                            <p className='text-xs sm:text-xl'>support@hislovers.com</p>
-                        </div>
-                    </div>
+                 <MenuLists menuLists={menuLists}/>
+              <Socials socials={socials}/>
                 </div>
 
 
